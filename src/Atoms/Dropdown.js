@@ -13,6 +13,6 @@ export default styled.div`
         padding: 0 0.4rem 0 0.4rem;
         margin: 0 1rem 0 1rem;
         position: absolute;
-        top: 12rem;
+        top: 11.5rem;
         border: none;
 `;
