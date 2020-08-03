@@ -1,15 +1,20 @@
-import FilterWrapper from "../Atoms/Bar";
+import FilterWrapper from "../Atoms/FilterWrapper";
 import FilterButton from "../Molecules/FilterButton";
 import DropdownMenu from "../Molecules/DropdownMenu";
 import styled from "styled-components";
 import React, { Component } from "react";
-import FilterItem from "../Atoms/FilterItem";
+import {useState} from 'react';
 
 export default function Filter(props) {
+    const [clicked, setClicked]=useState(false);
+    const openMenu=()=>{
+        console.log(clicked)
+        setClicked(!clicked)
+    }
 	return (
-		<FilterWrapper>
+		<FilterWrapper onClick={()=>openMenu()}>
 			<FilterButton></FilterButton>
-			<DropdownMenu data={props.data}></DropdownMenu>
+			{clicked && <DropdownMenu data={props.data}></DropdownMenu>}
 		</FilterWrapper>
 	);
 }
