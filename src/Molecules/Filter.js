@@ -13,7 +13,7 @@ export default function Filter(props) {
     }
 	return (
 		<FilterWrapper onClick={()=>openMenu()}>
-			<FilterButton></FilterButton>
+			<FilterButton title={props.title}></FilterButton>
 			{clicked && <DropdownMenu data={props.data}></DropdownMenu>}
 		</FilterWrapper>
 	);
