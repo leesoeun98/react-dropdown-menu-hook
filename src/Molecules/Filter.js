@@ -9,7 +9,7 @@ export default function Filter(props) {
 	return (
 		<FilterWrapper>
 			<FilterButton></FilterButton>
-			<DropdownMenu></DropdownMenu>
+			<DropdownMenu data={props.data}></DropdownMenu>
 		</FilterWrapper>
 	);
 }
