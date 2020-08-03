@@ -6,7 +6,6 @@ export default styled.div`
     flex-direction: column;
     height: fit-content;
     background: #ffffff;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 2rem;
     `;
