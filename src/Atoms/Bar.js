@@ -8,4 +8,5 @@ export default styled.div`
     background: #85e3ff;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem 0 1rem;
     `;

@@ -12,7 +12,6 @@ export default styled.div`
 		justify-content: left;
 		align-items: center;
         padding: 0 0.4rem 0 0.4rem;
-        margin: 0 1rem 0 1rem;
         position: relative;
 	`}
 `;
