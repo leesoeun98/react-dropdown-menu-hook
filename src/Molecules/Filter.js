@@ -10,11 +10,17 @@ export default function Filter(props) {
     const openMenu=()=>{
         console.log(clicked)
         setClicked(!clicked)
-    }
+	}
+	const [item, setItem]=useState(null);
+
+	const selectItem=(item)=>{
+		console.log(item)
+		setItem(item)
+	}
 	return (
 		<FilterWrapper onClick={()=>openMenu()}>
-			<FilterButton title={props.title}></FilterButton>
-			{clicked && <DropdownMenu data={props.data}></DropdownMenu>}
+			<FilterButton title={item? item.name : props.title}></FilterButton>
+			{clicked && <DropdownMenu data={props.data} selectItem={selectItem}></DropdownMenu>}
 		</FilterWrapper>
 	);
 }
