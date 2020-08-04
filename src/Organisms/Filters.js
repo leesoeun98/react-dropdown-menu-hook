@@ -7,10 +7,10 @@ import { Animal, Flower, Food, Location } from "../Molecules/Item";
 export default function Filters(props) {
 	return (
 		<Bar>
-			<Filter data={Animal}></Filter>
-			<Filter data={Flower}></Filter>
-			<Filter data={Food}></Filter>
-			<Filter data={Location}></Filter>
+			<Filter data={Animal} title="animal"></Filter>
+			<Filter data={Flower} title="flower"></Filter>
+			<Filter data={Food} title="food"></Filter>
+			<Filter data={Location} title="location"></Filter>
 		</Bar>
 	);
 }
