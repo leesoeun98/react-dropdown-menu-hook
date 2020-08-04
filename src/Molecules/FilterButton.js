@@ -8,7 +8,9 @@ import Text from "../Atoms/Text";
 export default function Filterbutton(props) {
 	return (
 		<FilterButton backgroundColor="#ffffff" border="0.08rem" borderColor="#8b90a0">
-			<Text>{props.title}</Text>
+			<Text line="1.08rem" level={4} align="center" color="#232735">
+				{props.title}
+			</Text>
 		</FilterButton>
 	);
 }
