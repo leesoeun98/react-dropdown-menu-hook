@@ -1,11 +1,12 @@
 import styled, {css} from "styled-components";
 
 export default styled.div`
-	width: 48rem;
+	width: 50rem;
     display: flex;
     flex-direction: row;
-    height: 20rem;
+    height: 3rem;
     background: #85e3ff;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 1rem 0 1rem;
     `;
