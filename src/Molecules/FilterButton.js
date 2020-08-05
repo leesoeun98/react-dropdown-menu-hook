@@ -10,9 +10,9 @@ import IconX from "../Atoms/Icons/X";
 
 export default function Filterbutton(props) {
 	const iconStyle = {
-		width: "1rem",
-		height: "1rem",
-		margin: "0rem 0 0 0rem",
+		width: "0.6rem",
+		height: "0.6rem",
+		margin: "0 0 0 0",
 		align: "center",
 	};
 	const iconXStyle = {
@@ -35,10 +35,10 @@ export default function Filterbutton(props) {
 		);
 		background = "#d3d4d8";
 	} else if (props.clicked) {
-		icon = <IconUp styled={iconStyle} fill="#8b90a0"></IconUp>;
+		icon = <Button><IconUp styled={iconStyle} fill="#8b90a0"></IconUp></Button>;
 		background = "#f0f1f3";
 	} else {
-		icon = <IconDown styled={iconStyle} fill="#8b90a0"></IconDown>;
+		icon = <Button><IconDown styled={iconStyle} fill="#8b90a0"></IconDown></Button>;
 		background = "#ffffff";
 	}
 	return (
@@ -55,5 +55,6 @@ const Button = styled.div`
 	align-items: center;
 	flex-direction: row;
 	height: 1rem;
-	width: 1rem;
+	width: 0.8rem;
+	margin: 0 0.2rem 0.1rem 0;
 `;
