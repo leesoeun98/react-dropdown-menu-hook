@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function Filter(props) {
 	const [clicked, setClicked] = useState(false);
 	const openMenu = () => {
-		console.log(clicked);
+		if(item)return;
 		setClicked(!clicked);
 	};
 	const [item, setItem] = useState(null);
@@ -22,8 +22,12 @@ export default function Filter(props) {
 			<FilterButton
 				title={item ? item.name : props.title}
 				//title = {item?.name || props.title}
+				clicked={clicked}
+				item={item}
+				setClicked={setClicked}
+				setItem={setItem}
 			></FilterButton>
-			{clicked && <DropdownMenu data={props.data} selectItem={selectItem}></DropdownMenu>}
+			{clicked && !item && <DropdownMenu data={props.data} selectItem={selectItem}></DropdownMenu>}
 		</FilterWrapper>
 	);
 }
