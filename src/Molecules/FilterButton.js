@@ -10,34 +10,39 @@ import IconX from "../Atoms/Icons/X";
 
 export default function Filterbutton(props) {
 	const iconStyle = {
-		width: "0.4rem",
-		height: "0.4rem",
-		margin: "0.3rem 0 0 0.3rem",
+		width: "1rem",
+		height: "1rem",
+		margin: "0rem 0 0 0rem",
+		align: "center",
 	};
 	const iconXStyle = {
 		width: "0.6rem",
 		height: "0.6rem",
 		margin: "0 0 0 0",
+		align: "center",
 	};
-	let icon = <Button><IconDown styled={iconStyle} fill="#8b90a0"></IconDown></Button>;
+	let icon = <IconDown styled={iconStyle} fill="#8b90a0"></IconDown>;
 	let background = "#ffffff";
 	if (props.item) {
 		icon = (
-			<Button onClick={()=>{props.setItem(null); props.setClicked(false)}}>
+			<Button
+				onClick={() => {
+					props.setItem(null);
+					props.setClicked(false);
+				}}>
 				<IconX styled={iconXStyle} fill="#8b90a0"></IconX>
 			</Button>
 		);
 		background = "#d3d4d8";
+	} else if (props.clicked) {
+		icon = <IconUp styled={iconStyle} fill="#8b90a0"></IconUp>;
+		background = "#f0f1f3";
 	} else {
-		icon = props.clicked ? (
-			<IconUp styled={iconStyle} fill="#8b90a0"></IconUp>
-		) : (
-			<IconDown styled={iconStyle} fill="#8b90a0"></IconDown>
-		);
-		background = props.clicked ? "#f0f1f3" : "#ffffff";
+		icon = <IconDown styled={iconStyle} fill="#8b90a0"></IconDown>;
+		background = "#ffffff";
 	}
 	return (
-		<FilterButton backgroundColor="#ffffff" border="0.08rem" borderColor="#8b90a0">
+		<FilterButton backgroundColor={background} border="0.08rem" borderColor="#8b90a0">
 			<Text line="1.08rem" level={4} align="center" color="#232735">
 				{props.title}
 			</Text>
@@ -49,6 +54,6 @@ const Button = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	height: fit-content;
+	height: 1rem;
 	width: 1rem;
 `;
