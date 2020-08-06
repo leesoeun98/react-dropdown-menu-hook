@@ -11,12 +11,7 @@ export default styled.div`
 		justify-content: left;
 		align-items: center;
         padding: 0 0.4rem 0 0.4rem;
-        margin: 0 1rem 0 1rem;
         position: absolute;
-<<<<<<< HEAD
-        top: 11.5rem;
-=======
         top: 3rem;
->>>>>>> 237a75ebcf113d095a6402cf61d4dfd72cff76f1
         border: none;
 `;

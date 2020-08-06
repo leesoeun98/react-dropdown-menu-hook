@@ -7,7 +7,7 @@ export default function Dropdown(props) {
 	return (
 		<DropdownMenu>
             {props.data.map((value)=>(
-                <FilterItem Item={value}></FilterItem>
+                <FilterItem item={value} selectItem={props.selectItem}></FilterItem>
             ))}
 		</DropdownMenu>
 
