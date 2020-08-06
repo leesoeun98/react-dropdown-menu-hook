@@ -5,7 +5,7 @@ export default styled.div`
 		width: 6rem;
 		display: flex;
 		flex-direction: row;
-		height: 1.8rem;
+		height: 1.6rem;
 		background: ${props.background} ;
 		justify-content: left;
         align-items: center;
