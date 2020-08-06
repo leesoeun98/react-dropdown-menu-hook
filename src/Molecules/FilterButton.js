@@ -54,7 +54,7 @@ const Button = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	height: 1rem;
+	height: 0.9rem;
 	width: 0.8rem;
-	margin: 0 0.2rem 0.1rem 0;
+	margin: 0 0.2rem 0.3rem 0;
 `;
