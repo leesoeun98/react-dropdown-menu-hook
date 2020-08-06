@@ -1,11 +1,14 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export default styled.div`
-    width: 6rem;
-    display: flex;
-    flex-direction: row;
-    height: 1.8rem;
-    background: #ffffff;
-    justify-content: left;
-    align-items: center;
-    `;
+	${(props) => css`
+		width: 6rem;
+		display: flex;
+		flex-direction: row;
+		height: 1.6rem;
+		background: ${props.background} ;
+		justify-content: left;
+        align-items: center;
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+	`}
+`;
